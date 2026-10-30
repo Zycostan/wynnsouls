@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c0xbwvh1bqi3c"]
+
+[ext_resource type="Script" uid="uid://cqkil3err22mk" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://tgbfc8gbqika" path="res://scenes/player/player_visuals.tscn" id="2_0owmy"]
+[ext_resource type="Script" uid="uid://wdexjtnswr17" path="res://scripts/player/input/Input.gd" id="2_dovo2"]
+[ext_resource type="PackedScene" uid="uid://bct5r0lrfiaqt" path="res://scenes/player/player_model.tscn" id="3_lvxji"]
+[ext_resource type="Script" uid="uid://dvgj75lsmso5o" path="res://scripts/player/camera.gd" id="4_p47bc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql63m"]
+radius = 0.3
+
+[node name="player" type="CharacterBody3D" unique_id=960337874]
+script = ExtResource("1_8afob")
+
+[node name="Visuals" parent="." unique_id=2111002862 instance=ExtResource("2_0owmy")]
+
+[node name="Model" parent="." unique_id=1316543408 node_paths=PackedStringArray("humanoid") instance=ExtResource("3_lvxji")]
+humanoid = NodePath("..")
+
+[node name="Input" type="Node" parent="." unique_id=1252611069]
+script = ExtResource("2_dovo2")
+
+[node name="Cam" type="Node3D" parent="." unique_id=624212257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("4_p47bc")
+
+[node name="PlayerCamera" type="Camera3D" parent="Cam" unique_id=1169122688]
+transform = Transform3D(-1, 5.5830206e-08, -1.4029511e-07, 0, 0.9291326, 0.36974674, 1.509958e-07, 0.36974674, -0.9291326, 0, 3.472, -2.87)
+
+[node name="collider" type="CollisionShape3D" parent="." unique_id=1338084682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ql63m")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bedlm24wn4vl2"]
+
+[ext_resource type="Script" uid="uid://de02xyxb1ake6" path="res://scripts/player/humanoidModel/humanoid_hitbox.gd" id="1_eqmo2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c8n1s"]
+radius = 0.3
+height = 1.85
+
+[node name="Hitbox" type="Area3D" unique_id=992453449]
+script = ExtResource("1_eqmo2")
+
+[node name="HitboxCollider" type="CollisionShape3D" parent="." unique_id=1434537913]
+shape = SubResource("CapsuleShape3D_c8n1s")

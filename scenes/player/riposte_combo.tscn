@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://hd8aq81kciui"]
+
+[ext_resource type="Script" uid="uid://bej32bqq6aky2" path="res://scripts/player/moves/combos/riposte_combo.gd" id="1_keu6m"]
+
+[node name="RiposteCombo" type="Node" unique_id=1046322743]
+script = ExtResource("1_keu6m")

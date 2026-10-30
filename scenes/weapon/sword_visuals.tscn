@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bi3jq18pblrpb"]
+
+[node name="SwordVisuals" type="Node3D" unique_id=584805241]
+
+[node name="Core" type="CSGBox3D" parent="." unique_id=1431545662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+size = Vector3(0.05, 1, 0.05)
