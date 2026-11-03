@@ -13,9 +13,8 @@
 			"tasks": [
 				"26e7c8eb-23ce-47b0-84d7-c60c482a0359",
 				"3ccace76-d2ae-4431-8c11-82c57857795d",
-				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
-				"1e842873-b390-496f-8684-0ac079be3daf",
-				"072b1aba-09ca-4a52-9b02-cb46d533c385"
+				"072b1aba-09ca-4a52-9b02-cb46d533c385",
+				"ae2a9877-e5ea-4c72-be0f-50e1da984d14"
 			]
 		},
 		{
@@ -23,7 +22,9 @@
 			"title": "Doing",
 			"tasks": [
 				"5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
-				"16efed9a-3b98-40be-8e8b-1312b032781b"
+				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
+				"1e842873-b390-496f-8684-0ac079be3daf",
+				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec"
 			]
 		},
 		{
@@ -47,7 +48,24 @@
 			"title": "Inventory",
 			"description": "",
 			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
-			"steps": []
+			"steps": [
+				{
+					"details": "Picking up items",
+					"done": true
+				},
+				{
+					"details": "Basic grid-based UI",
+					"done": false
+				},
+				{
+					"details": "Drag and drop",
+					"done": false
+				},
+				{
+					"details": "equippable items",
+					"done": false
+				}
+			]
 		},
 		{
 			"uuid": "1e842873-b390-496f-8684-0ac079be3daf",
@@ -116,8 +134,15 @@
 			]
 		},
 		{
-			"uuid": "16efed9a-3b98-40be-8e8b-1312b032781b",
-			"title": "HORSES",
+			"uuid": "2dea5bc5-6fe6-4055-97e4-4eb6c64427ec",
+			"title": "Stats n' Shit, crazy",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "ae2a9877-e5ea-4c72-be0f-50e1da984d14",
+			"title": "Saving and Loading",
 			"description": "",
 			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
 			"steps": []

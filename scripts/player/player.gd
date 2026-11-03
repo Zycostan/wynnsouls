@@ -8,8 +8,6 @@ class_name Player
 @onready var collider = $collider
 
 
-
-
 func _ready() -> void:
 	visuals.accept_model(model)
 

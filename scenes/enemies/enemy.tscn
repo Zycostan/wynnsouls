@@ -751,17 +751,6 @@ skeleton = NodePath("../../GeneralSkeleton")
 
 [node name="SwordVisuals" parent="Visuals" unique_id=584805241 instance=ExtResource("2_emj2s")]
 
-[node name="Stamina_bar" type="Label" parent="Visuals" unique_id=1682484749]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Stamina: "
-
-[node name="Health_bar" type="Label" parent="Visuals" unique_id=702488814]
-offset_top = 24.0
-offset_right = 56.0
-offset_bottom = 47.0
-text = "Health:"
-
 [node name="Root" type="BoneAttachment3D" parent="." unique_id=1484521995]
 transform = Transform3D(-1, 4.6897233e-14, 8.742278e-08, 0, 1, -5.364418e-07, -8.742278e-08, -5.364418e-07, -1, -4.3798853e-09, 0.9167, 0.050100047)
 bone_name = "Hips"

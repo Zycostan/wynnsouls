@@ -5,9 +5,14 @@
 [ext_resource type="Script" uid="uid://wdexjtnswr17" path="res://scripts/player/input/Input.gd" id="2_dovo2"]
 [ext_resource type="PackedScene" uid="uid://bct5r0lrfiaqt" path="res://scenes/player/player_model.tscn" id="3_lvxji"]
 [ext_resource type="Script" uid="uid://dvgj75lsmso5o" path="res://scripts/player/camera.gd" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://dhalag8s6xqc2" path="res://scripts/inventory/interactionHandler.gd" id="6_75vfm"]
+[ext_resource type="Script" uid="uid://bapgp72qv4gqc" path="res://scripts/inventory/itemData.gd" id="7_0owmy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql63m"]
 radius = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ql63m"]
+radius = 1.7871867
 
 [node name="player" type="CharacterBody3D" unique_id=960337874]
 script = ExtResource("1_8afob")
@@ -25,8 +30,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.1)
 script = ExtResource("4_p47bc")
 
 [node name="PlayerCamera" type="Camera3D" parent="Cam" unique_id=1169122688]
-transform = Transform3D(-1, 0, 8.742278e-08, 1.5180806e-08, 0.9848078, 0.1736482, -8.609462e-08, 0.1736482, -0.9848078, 0, 2.2, -1.9)
+transform = Transform3D(-1, 0, 8.742278e-08, 1.5180806e-08, 0.9848078, 0.1736482, -8.609462e-08, 0.1736482, -0.9848078, 0, 2.2, -3.1999998)
 
 [node name="collider" type="CollisionShape3D" parent="." unique_id=1338084682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ql63m")
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=673368094]
+script = ExtResource("6_75vfm")
+ItemTypes = Array[ExtResource("7_0owmy")]([null])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=189110562]
+shape = SubResource("SphereShape3D_ql63m")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="OnObjectEnteredArea"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="OnObjectExitedArea"]

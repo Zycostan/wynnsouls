@@ -259,13 +259,17 @@ skin = SubResource("Skin_3kjmr")
 
 [node name="SwordVisuals" parent="." unique_id=584805241 instance=ExtResource("2_0g03g")]
 
-[node name="Stamina_bar" type="Label" parent="." unique_id=1682484749]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Stamina: "
+[node name="Stamina_bar" type="ProgressBar" parent="." unique_id=1199920034]
+modulate = Color(0.29017138, 0.6015431, 0.83679014, 1)
+offset_top = 64.0
+offset_right = 200.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+value = 12.32
 
-[node name="Health_bar" type="Label" parent="." unique_id=702488814]
+[node name="Health_bar" type="ProgressBar" parent="." unique_id=862582931]
+modulate = Color(0.7115166, 0.2134547, 0.24337229, 1)
 offset_top = 24.0
-offset_right = 56.0
-offset_bottom = 47.0
-text = "Health:"
+offset_right = 200.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
