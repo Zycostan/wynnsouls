@@ -733,11 +733,10 @@ libraries/ = ExtResource("1_lc62w")
 libraries/UAL2 = ExtResource("2_v5dfk")
 playback_default_blend_time = 0.3
 
-[node name="Visuals" type="Node3D" parent="." unique_id=1015869737 node_paths=PackedStringArray("sword_visuals", "sword")]
+[node name="Visuals" type="Node3D" parent="." unique_id=1015869737 node_paths=PackedStringArray("sword_visuals")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("5_kfb80")
 sword_visuals = NodePath("SwordVisuals")
-sword = NodePath("")
 
 [node name="Mannequin" type="MeshInstance3D" parent="Visuals" unique_id=165994012]
 material_override = SubResource("StandardMaterial3D_ndh8v")

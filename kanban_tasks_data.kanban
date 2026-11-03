@@ -1,0 +1,139 @@
+{
+	"categories": [
+		{
+			"uuid": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "f76d6ce0-babc-4799-8633-00d6f56ba006",
+			"title": "Todo",
+			"tasks": [
+				"26e7c8eb-23ce-47b0-84d7-c60c482a0359",
+				"3ccace76-d2ae-4431-8c11-82c57857795d",
+				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
+				"1e842873-b390-496f-8684-0ac079be3daf",
+				"072b1aba-09ca-4a52-9b02-cb46d533c385"
+			]
+		},
+		{
+			"uuid": "69e66e06-098d-4b14-9f44-d2d6af3739cd",
+			"title": "Doing",
+			"tasks": [
+				"5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
+				"16efed9a-3b98-40be-8e8b-1312b032781b"
+			]
+		},
+		{
+			"uuid": "94101ac0-d7ce-4767-a01a-1acf634ea1aa",
+			"title": "Done",
+			"tasks": [
+				"ce25c71a-2a4c-4a26-8c4a-f04b2f0fc360"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "ce25c71a-2a4c-4a26-8c4a-f04b2f0fc360",
+			"title": "Soulslike Combat",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "6371b7e9-5285-485a-b705-cbeaee1daa6a",
+			"title": "Inventory",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "1e842873-b390-496f-8684-0ac079be3daf",
+			"title": "Quests",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
+			"title": "Enemies",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": [
+				{
+					"details": "Basic Enemies",
+					"done": true
+				},
+				{
+					"details": "Boss Enemies",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "072b1aba-09ca-4a52-9b02-cb46d533c385",
+			"title": "Models",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": [
+				{
+					"details": "Weapons, Etc",
+					"done": false
+				},
+				{
+					"details": "NPCs, Etc",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "3ccace76-d2ae-4431-8c11-82c57857795d",
+			"title": "Interactable Objects",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "26e7c8eb-23ce-47b0-84d7-c60c482a0359",
+			"title": "IMPORTANT!!",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": [
+				{
+					"details": "Ladders",
+					"done": true
+				},
+				{
+					"details": "Doors",
+					"done": false
+				},
+				{
+					"details": "Chest",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "16efed9a-3b98-40be-8e8b-1312b032781b",
+			"title": "HORSES",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"f76d6ce0-babc-4799-8633-00d6f56ba006"
+			],
+			[
+				"69e66e06-098d-4b14-9f44-d2d6af3739cd"
+			],
+			[
+				"94101ac0-d7ce-4767-a01a-1acf634ea1aa"
+			]
+		]
+	}
+}

@@ -253,6 +253,7 @@ bind/64/pose = Transform3D(-1.0000001, -6.9388815e-18, -1.05879106e-22, 4.879777
 script = ExtResource("1_qy2ae")
 
 [node name="Mannequin" type="MeshInstance3D" parent="." unique_id=2125677482]
+layers = 2
 mesh = SubResource("ArrayMesh_wd4ty")
 skin = SubResource("Skin_3kjmr")
 
