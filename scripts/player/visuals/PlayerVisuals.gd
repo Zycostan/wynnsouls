@@ -4,7 +4,7 @@ class_name PlayerVisuals
 @onready var model : PlayerModel
 @onready var mannequin: MeshInstance3D = $Mannequin
 
-@onready var sword_visuals: Node3D = $SwordVisuals
+@onready var sword_visuals: Node3D = $SwordVisuals if has_node("SwordVisuals") else null
 @onready var stamina_bar: ProgressBar = $Stamina_bar
 @onready var health_bar: ProgressBar = $Health_bar
 
@@ -18,7 +18,8 @@ func _process(_delta):
 	update_resources_interface()
 
 func adjust_weapon_visuals():
-	sword_visuals.global_transform = model.active_weapon.global_transform
+	if model and model.active_weapon and sword_visuals:
+		sword_visuals.global_transform = model.active_weapon.global_transform
 
 func update_resources_interface():
 	if not model.is_enemy:

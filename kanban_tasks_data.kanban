@@ -21,10 +21,11 @@
 			"uuid": "69e66e06-098d-4b14-9f44-d2d6af3739cd",
 			"title": "Doing",
 			"tasks": [
+				"7f1ebc6f-782b-4fde-adab-bd5c2f1d211b",
 				"5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
-				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
 				"1e842873-b390-496f-8684-0ac079be3daf",
-				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec"
+				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec",
+				"6371b7e9-5285-485a-b705-cbeaee1daa6a"
 			]
 		},
 		{
@@ -42,30 +43,6 @@
 			"description": "",
 			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
 			"steps": []
-		},
-		{
-			"uuid": "6371b7e9-5285-485a-b705-cbeaee1daa6a",
-			"title": "Inventory",
-			"description": "",
-			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
-			"steps": [
-				{
-					"details": "Picking up items",
-					"done": true
-				},
-				{
-					"details": "Basic grid-based UI",
-					"done": false
-				},
-				{
-					"details": "Drag and drop",
-					"done": false
-				},
-				{
-					"details": "equippable items",
-					"done": false
-				}
-			]
 		},
 		{
 			"uuid": "1e842873-b390-496f-8684-0ac079be3daf",
@@ -121,7 +98,7 @@
 			"steps": [
 				{
 					"details": "Ladders",
-					"done": true
+					"done": false
 				},
 				{
 					"details": "Doors",
@@ -143,6 +120,20 @@
 		{
 			"uuid": "ae2a9877-e5ea-4c72-be0f-50e1da984d14",
 			"title": "Saving and Loading",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "7f1ebc6f-782b-4fde-adab-bd5c2f1d211b",
+			"title": "Mage combat",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "6371b7e9-5285-485a-b705-cbeaee1daa6a",
+			"title": "Inventory",
 			"description": "",
 			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
 			"steps": []
