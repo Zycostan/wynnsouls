@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://rxrxmsc05b74"]
 
 [ext_resource type="Script" uid="uid://c1af7gp3blrpy" path="res://scripts/weapon/sword.gd" id="1_jm7kl"]
+[ext_resource type="PackedScene" uid="uid://dn5452byyb7uf" path="res://scenes/player/attack.tscn" id="2_sjx0v"]
+[ext_resource type="PackedScene" uid="uid://c5ylx2skd8vwn" path="res://scenes/player/consecutive_attack.tscn" id="3_uj8n2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql63m"]
 radius = 0.2
@@ -15,3 +17,38 @@ size = Vector3(0.05, 0.2, 0.05)
 [node name="HitZone" type="CollisionShape3D" parent="." unique_id=332643137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56, 0)
 shape = SubResource("CapsuleShape3D_ql63m")
+
+[node name="Moves" type="Node" parent="." unique_id=1050496938]
+
+[node name="Slash1" parent="Moves" unique_id=1374391390 instance=ExtResource("2_sjx0v")]
+RELEASES_PRIORITY = 0.4
+animation = "UAL2/Sword_Regular_A"
+move_name = "slash_1"
+priority = 15
+backend_animation = "slash_1_params"
+stamina_cost = 15.0
+
+[node name="ConsecutiveAttack" parent="Moves/Slash1" unique_id=501968279 instance=ExtResource("3_uj8n2")]
+primary_input = "slash_1"
+triggered_move = "slash_2"
+
+[node name="Slash2" parent="Moves" unique_id=1519454237 instance=ExtResource("2_sjx0v")]
+RELEASES_PRIORITY = 0.5
+hit_damage = 15
+animation = "UAL2/Sword_Regular_B"
+move_name = "slash_2"
+priority = 15
+backend_animation = "slash_2_params"
+stamina_cost = 15.0
+
+[node name="ConsecutiveAttack" parent="Moves/Slash2" unique_id=802755693 instance=ExtResource("3_uj8n2")]
+primary_input = "slash_1"
+triggered_move = "slash_3"
+
+[node name="Slash3" parent="Moves" unique_id=1807912051 instance=ExtResource("2_sjx0v")]
+RELEASES_PRIORITY = 1.0
+animation = "UAL2/Sword_Regular_C"
+move_name = "slash_3"
+priority = 15
+backend_animation = "slash_3_params"
+stamina_cost = 15.0

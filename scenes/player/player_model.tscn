@@ -19,9 +19,7 @@
 [ext_resource type="Script" uid="uid://dbck7gmywr2dy" path="res://scripts/player/moves/landing_run.gd" id="9_4lhdc"]
 [ext_resource type="Script" uid="uid://b62nnu4wbfsjc" path="res://scripts/player/humanoidModel/states.gd" id="9_e26wm"]
 [ext_resource type="PackedScene" uid="uid://hd8aq81kciui" path="res://scenes/player/riposte_combo.tscn" id="12_iw5cw"]
-[ext_resource type="PackedScene" uid="uid://c5ylx2skd8vwn" path="res://scenes/player/consecutive_attack.tscn" id="14_ynfjr"]
 [ext_resource type="Script" uid="uid://cw0yw6d44rade" path="res://scripts/player/moves/staggered.gd" id="19_gnbca"]
-[ext_resource type="PackedScene" uid="uid://dn5452byyb7uf" path="res://scenes/player/attack.tscn" id="20_5i2if"]
 [ext_resource type="Script" uid="uid://bpf7vwp8j8rhx" path="res://scripts/player/moves/death.gd" id="22_0bsgo"]
 [ext_resource type="Script" uid="uid://e4fyieexwxxf" path="res://scripts/player/moves/parry.gd" id="22_5i2if"]
 [ext_resource type="Script" uid="uid://bf4qr1m2va25a" path="res://scripts/player/moves/parried.gd" id="22_aexjt"]
@@ -2240,39 +2238,6 @@ animation = "UAL2/Idle_Shield_Break"
 move_name = "staggered"
 priority = 100
 backend_animation = "staggered_params"
-
-[node name="Slash1" parent="States" unique_id=1374391390 instance=ExtResource("20_5i2if")]
-RELEASES_PRIORITY = 0.4
-animation = "UAL2/Sword_Regular_A"
-move_name = "slash_1"
-priority = 15
-backend_animation = "slash_1_params"
-stamina_cost = 15.0
-
-[node name="ConsecutiveAttack" parent="States/Slash1" unique_id=501968279 instance=ExtResource("14_ynfjr")]
-primary_input = "slash_1"
-triggered_move = "slash_2"
-
-[node name="Slash2" parent="States" unique_id=1765580994 instance=ExtResource("20_5i2if")]
-RELEASES_PRIORITY = 0.5
-hit_damage = 15
-animation = "UAL2/Sword_Regular_B"
-move_name = "slash_2"
-priority = 15
-backend_animation = "slash_2_params"
-stamina_cost = 15.0
-
-[node name="ConsecutiveAttack" parent="States/Slash2" unique_id=579083042 instance=ExtResource("14_ynfjr")]
-primary_input = "slash_1"
-triggered_move = "slash_3"
-
-[node name="Slash3" parent="States" unique_id=712052685 instance=ExtResource("20_5i2if")]
-RELEASES_PRIORITY = 1.0
-animation = "UAL2/Sword_Regular_C"
-move_name = "slash_3"
-priority = 15
-backend_animation = "slash_3_params"
-stamina_cost = 15.0
 
 [node name="Parry" type="Node" parent="States" unique_id=699526855]
 script = ExtResource("22_5i2if")

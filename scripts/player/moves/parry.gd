@@ -7,7 +7,7 @@ const ANIMATION_END : float = 1.2333
 
 func default_lifecycle(input : InputPackage):
 	if works_longer_than(ANIMATION_END):
-		if has_queued_move and resources.can_be_paid(humanoid.model.moves[queued_move]):
+		if has_queued_move and resources.can_be_paid(container.moves[queued_move]):
 			has_queued_move = false
 			return queued_move
 		return best_input_that_can_be_paid(input)

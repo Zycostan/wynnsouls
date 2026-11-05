@@ -8,13 +8,14 @@ var combat : HumanoidCombat
 var moves_data_repo : MovesDataRepository
 var container : HumanoidStates
 var area_awareness : AreaAwareness
+var weapon : Weapon
 
 
 @export var animation : String ## actual animation name
 @export var move_name : String ## name of the move, not the animation
 @export var priority : int ## self explanatory
 @export var backend_animation : String ## parameters
-@export var tracking_angular_speed : float = 10
+@export var tracking_angular_speed : float = 10 # I don't fucking know what this does, but if I remove it something breaks, it will stay
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -57,6 +58,8 @@ func default_lifecycle(_input : InputPackage) -> String:
 
 func check_combos(input : InputPackage):
 	for combo : Combo in combos:
+		if not container.moves.has(combo.triggered_move):
+			continue # the move you're doing belongs to a weapon that hasn't been equipped
 		if combo.is_triggered(input) and resources.can_be_paid(container.moves[combo.triggered_move]):
 			has_queued_move = true
 			queued_move = combo.triggered_move

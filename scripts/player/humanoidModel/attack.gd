@@ -19,7 +19,8 @@ func update(input : InputPackage, delta):
 	move_player(delta)
 	if accepts_queueing():
 		check_combos(input)
-	humanoid.model.active_weapon.is_attacking = right_weapon_hurts()
+	if weapon:
+		humanoid.model.active_weapon.is_attacking = right_weapon_hurts()
 
 func move_player(delta : float):
 	var delta_pos = get_root_position_delta(delta)
@@ -31,17 +32,18 @@ func move_player(delta : float):
 		forced_move = "midair"
 	humanoid.move_and_slide()
 
-func form_hit_data(weapon : Weapon) -> HitData:
+func form_hit_data(hitting_weapon : Weapon) -> HitData:
 	var hit = HitData.new()
 	hit.damage = hit_damage
 	hit.hit_move_animation = animation
 	hit.is_parryable = is_parryable()
-	hit.weapon = humanoid.model.active_weapon
+	hit.weapon = hitting_weapon
 	return hit
 
 func on_enter_state():
 	has_queued_move = false
 
 func on_exit_state():
-	humanoid.model.active_weapon.hitbox_ignore_list.clear()
-	humanoid.model.active_weapon.is_attacking = false
+	if weapon:
+		weapon.hitbox_ignore_list.clear()
+		weapon.is_attacking = false
