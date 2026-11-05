@@ -39,17 +39,3 @@ func switch_to(state : String):
 	current_move.mark_enter_state()
 	resources.pay_resource_cost(current_move)
 	animator.play(current_move.animation)
-
-func equip_weapon(weapon_prefab: PackedScene):
-	if active_weapon:
-		active_weapon.queue_free() # remove current weapon, duh
-	
-	var new_weapon = weapon_prefab.instantiate() as Weapon
-	$RightWrist/WeaponSocket.add_child(new_weapon)
-	active_weapon = new_weapon
-	active_weapon.holder = self
-
-func unequip_weapon():
-	if active_weapon:
-		active_weapon.queue_free()
-		active_weapon = null
