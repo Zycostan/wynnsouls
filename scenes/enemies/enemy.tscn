@@ -264,6 +264,15 @@ bind/64/name = &"ball_leaf_r"
 bind/64/bone = -1
 bind/64/pose = Transform3D(-1.0000001, -6.9388815e-18, -1.05879106e-22, 4.879777e-15, -1.490116e-07, 0.9999998, -5.8207675e-11, 1.0000001, -3.5527135e-15, -0.08900002, -0.19209997, -0.015200032)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_sb86v"]
+viewport_path = NodePath("Visuals/hpContainer")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sb86v"]
+bg_color = Color(0.40663755, 0.0992494, 0.12061813, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe3k2"]
+bg_color = Color(0.70980394, 0.21176471, 0.24313726, 1)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql63m"]
 radius = 0.3
 height = 1.7
@@ -750,6 +759,21 @@ skin = SubResource("Skin_3kjmr")
 skeleton = NodePath("../../GeneralSkeleton")
 
 [node name="SwordVisuals" parent="Visuals" unique_id=584805241 instance=ExtResource("2_emj2s")]
+
+[node name="hp3D" type="Sprite3D" parent="Visuals" unique_id=778774033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+texture = SubResource("ViewportTexture_sb86v")
+
+[node name="hpContainer" type="SubViewport" parent="Visuals" unique_id=104616539]
+size = Vector2i(200, 27)
+
+[node name="Health_bar" type="ProgressBar" parent="Visuals/hpContainer" unique_id=955913424]
+offset_right = 200.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sb86v")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pe3k2")
+value = 26.0
+rounded = true
 
 [node name="Root" type="BoneAttachment3D" parent="." unique_id=1484521995]
 transform = Transform3D(-1, 4.6897233e-14, 8.742278e-08, 0, 1, -5.364418e-07, -8.742278e-08, -5.364418e-07, -1, -4.3798853e-09, 0.9167, 0.050100047)
