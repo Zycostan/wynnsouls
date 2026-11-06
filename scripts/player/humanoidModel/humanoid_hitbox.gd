@@ -6,6 +6,8 @@ class_name Hurtbox
 @export var ignored_weapon_groups : Array[String]
 
 func _physics_process(_delta) -> void:
+	if not monitoring:
+		return
 	for area in get_overlapping_areas():
 		if is_eligible_attacking_weapon(area):
 			on_contact(area)
