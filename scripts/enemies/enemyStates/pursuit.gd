@@ -2,7 +2,7 @@ extends AIMove
 
 func check_transition(delta) -> Array:
 	if player.global_position.distance_to(character.global_position) < character.attack_radius:
-		return [true, "attack"]
+		return [true, attack_or_hold()]
 	if player.global_position.distance_to(spawn_point) > character.deaggro_radius:
 		return [true, "return"]
 	return [false, ""]

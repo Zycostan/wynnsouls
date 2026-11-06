@@ -5,7 +5,7 @@ extends AIMove
 func check_transition(_delta) -> Array:
 	if works_longer_than(stag_dur):
 		if player.global_position.distance_to(character.global_position) < character.attack_radius:
-			return [true, "attack"]
+			return [true, attack_or_hold()]
 		return [true, "pursuit"]
 	return [false, ""]
 

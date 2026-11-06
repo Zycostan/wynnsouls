@@ -249,17 +249,17 @@ bind/64/name = &"ball_leaf_r"
 bind/64/bone = -1
 bind/64/pose = Transform3D(-1.0000001, -6.9388815e-18, -1.05879106e-22, 4.879777e-15, -1.490116e-07, 0.9999998, -5.8207675e-11, 1.0000001, -3.5527135e-15, -0.08900002, -0.19209997, -0.015200032)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kscix"]
-bg_color = Color(0.09359344, 0.2824292, 0.4192071, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru537"]
-bg_color = Color(0.2901961, 0.6, 0.8352941, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g03g"]
 bg_color = Color(0.40663755, 0.0992494, 0.12061813, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmroa"]
 bg_color = Color(0.70980394, 0.21176471, 0.24313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kscix"]
+bg_color = Color(0.1660392, 0.3082068, 0.14494619, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru537"]
+bg_color = Color(0.40311363, 0.6503395, 0.23140103, 1)
 
 [node name="Visuals" type="Node3D" unique_id=2111002862]
 script = ExtResource("1_qy2ae")
@@ -269,15 +269,6 @@ layers = 2
 mesh = SubResource("ArrayMesh_wd4ty")
 skin = SubResource("Skin_3kjmr")
 
-[node name="Stamina_bar" type="ProgressBar" parent="." unique_id=1199920034]
-offset_top = 64.0
-offset_right = 200.0
-offset_bottom = 91.0
-theme_override_styles/background = SubResource("StyleBoxFlat_kscix")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ru537")
-value = 12.32
-rounded = true
-
 [node name="Health_bar" type="ProgressBar" parent="." unique_id=862582931]
 offset_top = 24.0
 offset_right = 200.0
@@ -285,6 +276,15 @@ offset_bottom = 51.0
 theme_override_styles/background = SubResource("StyleBoxFlat_0g03g")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dmroa")
 value = 26.0
+rounded = true
+
+[node name="Stamina_bar" type="ProgressBar" parent="." unique_id=1199920034]
+offset_top = 64.0
+offset_right = 200.0
+offset_bottom = 91.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kscix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ru537")
+value = 12.32
 rounded = true
 
 [node name="SwordVisuals" parent="." unique_id=584805241 instance=ExtResource("2_0g03g")]

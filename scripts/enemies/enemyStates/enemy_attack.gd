@@ -6,7 +6,7 @@ extends AIMove
 func check_transition(delta) -> Array:
 	if works_longer_than(animation_length):
 		if player.global_position.distance_to(character.global_position) < character.attack_radius:
-			return [true, "attack"]
+			return [true, attack_or_hold()]
 		if player.global_position.distance_to(spawn_point) > character.deaggro_radius:
 			return [true, "return"]
 		return [true, "pursuit"]
@@ -24,6 +24,10 @@ func manage_weapon():
 		right_weapon.is_attacking = true
 	else:
 		right_weapon.is_attacking = false
+
+
+func on_enter():
+	state_machine.register_attack(move_name, animation_length)
 
 
 func on_exit():

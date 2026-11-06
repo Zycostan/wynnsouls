@@ -46,6 +46,7 @@ func register_move(move: Move, weapon: Weapon = null) -> bool:
 	move.moves_data_repo = moves_data_repo
 	move.area_awareness = area_awareness
 	move.container = self
+	move.weapon = weapon
 	move.DURATION = moves_data_repo.get_duration(move.backend_animation)
 	move.assign_combos()
 	return true

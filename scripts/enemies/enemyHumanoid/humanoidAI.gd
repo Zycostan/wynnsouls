@@ -37,6 +37,10 @@ func react_on_hit(hit : HitData):
 		state_machine.switch_to("stagger")
 	hit.queue_free()
 
+func attack_or_hold() -> String:
+	if state_machine.can_attack():
+		return state_machine.pick_attack()
+	return "hold"
 
 # our little timestamps framework to work with timings inside our logic
 func mark_enter_state():

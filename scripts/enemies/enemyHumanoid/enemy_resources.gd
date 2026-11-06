@@ -9,7 +9,7 @@ class_name EnemyResources
 
 func lose_health(amount : float):
 	health -= amount
-	if health < 1:
+	if health < 1 and state_machine.current_move.move_name != "death":
 		state_machine.switch_to("death")
 
 

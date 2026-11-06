@@ -6,6 +6,14 @@ class_name MobStateMachine
 @export var right_weapon : Weapon
 @export var resources : EnemyResources
 
+@export var attack_names : Array[String] = ["attack"]
+@export var cooldown_min : float = 0.8
+@export var cooldown_max : float = 1.8
+
+var next_attack_time : float = 0.0
+var last_attack : String = ""
+var repeat_count : int = 0
+
 var moves : Dictionary # { String : AIMove }
 var current_move : AIMove
 
@@ -22,7 +30,6 @@ func _physics_process(delta):
 		switch_to(verdict[1])
 	current_move.update(delta)
 
-
 func switch_to(next_state_name : String):
 	print(current_move.move_name + " -> " + next_state_name)
 	current_move.on_exit()
@@ -30,7 +37,6 @@ func switch_to(next_state_name : String):
 	current_move.mark_enter_state()
 	current_move.on_enter()
 	animation_player.play(current_move.animation)
-
 
 func accept_states():
 	for child in get_children():
@@ -43,3 +49,17 @@ func accept_states():
 			child.spawn_point = character.spawn_point
 			child.right_weapon = right_weapon
 			child.resources = resources
+
+func can_attack() -> bool:
+	return Time.get_unix_time_from_system() >= next_attack_time
+
+func pick_attack() -> String:
+	var pool = attack_names.duplicate()
+	if repeat_count >= 2 and pool.size() > 1:
+		pool.erase(last_attack) # no 3-term presidency
+	return pool.pick_random()
+
+func register_attack(attack_name: String, duration: float):
+	repeat_count = repeat_count + 1 if attack_name == last_attack else 1
+	last_attack = attack_name
+	next_attack_time = Time.get_unix_time_from_system() + duration + randf_range(cooldown_min, cooldown_max)
