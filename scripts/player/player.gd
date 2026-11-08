@@ -7,6 +7,7 @@ class_name Player
 @onready var camera_mount = $Cam
 @onready var collider = $collider
 
+var inventory : Inventory = Inventory.new()
 
 func _ready() -> void:
 	visuals.accept_model(model)
@@ -16,3 +17,7 @@ func _physics_process(delta):
 	model.update(input, delta)
 	
 	input.queue_free()
+
+func on_item_picked_up(item: Item):
+	print("got a ", item.item_name)
+	inventory.add_item(item)

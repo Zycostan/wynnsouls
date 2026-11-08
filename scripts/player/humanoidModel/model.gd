@@ -41,21 +41,3 @@ func switch_to(state : String):
 	current_move.mark_enter_state()
 	resources.pay_resource_cost(current_move)
 	animator.play(current_move.animation)
-
-func equip_weapon(weapon_prefab: PackedScene):
-	unequip_weapon()
-	
-	var new_weapon = weapon_prefab.instantiate() as Weapon
-	$RightWrist/WeaponSocket.add_child(new_weapon)
-	active_weapon = new_weapon
-	active_weapon.holder = self
-	moves_container.load_weapon_moves(active_weapon)
-
-func unequip_weapon():
-	if not active_weapon:
-		return
-	if moves_container.is_weapon_move(current_move.move_name):
-		switch_to("idle")
-	moves_container.unload_weapon_moves()
-	active_weapon.queue_free()
-	active_weapon = null

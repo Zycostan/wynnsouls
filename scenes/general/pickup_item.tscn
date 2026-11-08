@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4sn02kxl4cmr"]
+
+[ext_resource type="Script" uid="uid://t4n063uhgpa" path="res://scripts/general/pickup_item.gd" id="1_vhmx5"]
+[ext_resource type="Resource" uid="uid://dhonavqlbymat" path="res://resources/item/weapon/basic_Sword.tres" id="2_1b44l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ql63m"]
+radius = 1.043132
+
+[node name="pickup_item" type="Node3D" unique_id=367582936]
+script = ExtResource("1_vhmx5")
+item = ExtResource("2_1b44l")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=183158602]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1538074257]
+shape = SubResource("SphereShape3D_ql63m")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
