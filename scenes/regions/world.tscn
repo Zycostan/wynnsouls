@@ -66,12 +66,11 @@ player = NodePath("../player")
 [node name="InventoryDialog" parent="UIRoot" unique_id=1659463318 instance=ExtResource("6_u3dv3")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.0
 anchor_bottom = 0.5
-offset_left = -48.5
 offset_top = -17.5
-offset_right = 48.5
+offset_right = 97.0
 offset_bottom = 17.5
+grow_horizontal = 1

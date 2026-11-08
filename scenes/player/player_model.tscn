@@ -1652,8 +1652,6 @@ area_awareness = NodePath("AreaAwareness")
 active_weapon = NodePath("RightWrist/WeaponSocket/Sword")
 moves_container = NodePath("States")
 
-[node name="Inventory" type="Node" parent="." unique_id=269107232]
-
 [node name="Resources" type="Node" parent="." unique_id=944445028]
 script = ExtResource("2_c8n1s")
 
