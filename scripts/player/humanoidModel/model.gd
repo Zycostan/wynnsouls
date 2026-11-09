@@ -13,6 +13,8 @@ class_name PlayerModel
 @export var active_weapon: Weapon
 @export var moves_container: HumanoidStates
 
+@export var weapon_socket : Node3D
+
 var current_move : Move
 
 func _ready():
@@ -41,3 +43,24 @@ func switch_to(state : String):
 	current_move.mark_enter_state()
 	resources.pay_resource_cost(current_move)
 	animator.play(current_move.animation)
+
+func equip_weapon(item: WeaponItem):
+	unequip_weapon()
+	var weapon := item.weapon_scene.instantiate() as Weapon
+	weapon.add_to_group("enemys_weapon" if is_enemy else "players_weapon")
+	weapon.holder = self
+	weapon_socket.add_child(weapon)
+	active_weapon = weapon
+	moves_container.load_weapon_moves(weapon)
+
+func unequip_weapon():
+	if active_weapon == null:
+		return
+	if current_move != moves_container.moves["idle"]:
+		switch_to("idle")
+	moves_container.unload_weapon_moves()
+	active_weapon.queue_free()
+	active_weapon = null
+
+func can_change_weapon() -> bool:
+	return not moves_container.is_weapon_move(current_move.move_name)

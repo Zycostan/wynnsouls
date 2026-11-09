@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dhonavqlbymat"]
+[gd_resource type="Resource" script_class="WeaponItem" format=3 uid="uid://dhonavqlbymat"]
 
-[ext_resource type="Script" uid="uid://cye08s7lj0ik8" path="res://scripts/player/inventory/item.gd" id="1_4hfj8"]
-[ext_resource type="Texture2D" uid="uid://esshsqu3nle7" path="res://icon.svg" id="1_b1aw2"]
-[ext_resource type="PackedScene" uid="uid://rxrxmsc05b74" path="res://scenes/weapon/sword.tscn" id="2_juitv"]
-[ext_resource type="PackedScene" uid="uid://bi3jq18pblrpb" path="res://scenes/weapon/sword_visuals.tscn" id="3_d3q6i"]
+[ext_resource type="Script" uid="uid://p1w8rh3rc7md" path="res://scripts/player/inventory/weapon_item.gd" id="1_6tw0q"]
+[ext_resource type="Texture2D" uid="uid://esshsqu3nle7" path="res://icon.svg" id="1_uwi4f"]
+[ext_resource type="PackedScene" uid="uid://bi3jq18pblrpb" path="res://scenes/weapon/sword_visuals.tscn" id="2_l43xt"]
+[ext_resource type="PackedScene" uid="uid://rxrxmsc05b74" path="res://scenes/weapon/sword.tscn" id="4_l43xt"]
 
 [resource]
-script = ExtResource("1_4hfj8")
-item_icon = ExtResource("1_b1aw2")
-item_name = "Basic_Sword"
-item_model = ExtResource("2_juitv")
-item_visuals = ExtResource("3_d3q6i")
-metadata/_custom_type_script = "uid://cye08s7lj0ik8"
+script = ExtResource("1_6tw0q")
+weapon_scene = ExtResource("4_l43xt")
+item_icon = ExtResource("1_uwi4f")
+item_name = "Basic Sword"
+item_visuals = ExtResource("2_l43xt")
+metadata/_custom_type_script = "uid://p1w8rh3rc7md"

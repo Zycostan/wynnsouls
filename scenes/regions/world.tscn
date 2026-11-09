@@ -4,9 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://esshsqu3nle7" path="res://icon.svg" id="1_suhu5"]
 [ext_resource type="Script" uid="uid://drooedfdgcdr5" path="res://scenes/regions/world.gd" id="1_w5816"]
 [ext_resource type="PackedScene" uid="uid://cxmmvcs41rjyq" path="res://scenes/enemies/enemy.tscn" id="4_w5816"]
-[ext_resource type="PackedScene" uid="uid://b4sn02kxl4cmr" path="res://scenes/general/pickup_item.tscn" id="5_upn1n"]
+[ext_resource type="PackedScene" uid="uid://b4sn02kxl4cmr" path="res://scenes/general/pickup_item.tscn" id="5_uhfei"]
 [ext_resource type="Script" uid="uid://rxrqg0yi27s8" path="res://scripts/general/generalui/ui_root.gd" id="6_30c7u"]
+[ext_resource type="Resource" uid="uid://dhonavqlbymat" path="res://resources/item/weapon/basic_sword.tres" id="6_osun5"]
 [ext_resource type="PackedScene" uid="uid://csrbn4wplt821" path="res://scenes/ui/inventory/inventory_dialog.tscn" id="6_u3dv3"]
+[ext_resource type="Script" uid="uid://dme6ngphhmh3n" path="res://scripts/player/inventory/equipped_slot_hud.gd" id="6_uhfei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6tqpd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -56,12 +58,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 [node name="Enemy" parent="." unique_id=1139875144 node_paths=PackedStringArray("player") instance=ExtResource("4_w5816")]
 player = NodePath("../player")
 
-[node name="pickup_item" parent="." unique_id=367582936 instance=ExtResource("5_upn1n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -12)
+[node name="pickup_item" parent="." unique_id=367582936 instance=ExtResource("5_uhfei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -13.7)
+item = ExtResource("6_osun5")
 
 [node name="UIRoot" type="CanvasLayer" parent="." unique_id=1571712437 node_paths=PackedStringArray("player")]
 script = ExtResource("6_30c7u")
 player = NodePath("../player")
+
+[node name="EquippedSlot" type="PanelContainer" parent="UIRoot" unique_id=1799338197]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 88.0
+script = ExtResource("6_uhfei")
+metadata/_custom_type_script = "uid://y4us44bex6un"
+
+[node name="TextureRect" type="TextureRect" parent="UIRoot/EquippedSlot" unique_id=1201875311]
+unique_name_in_owner = true
+layout_mode = 2
+expand_mode = 1
 
 [node name="InventoryDialog" parent="UIRoot" unique_id=1659463318 instance=ExtResource("6_u3dv3")]
 unique_name_in_owner = true

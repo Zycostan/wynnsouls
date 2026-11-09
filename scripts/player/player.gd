@@ -21,3 +21,17 @@ func _physics_process(delta):
 func on_item_picked_up(item: Item):
 	print("got a ", item.item_name)
 	inventory.add_item(item)
+
+func toggle_equip(item: Item):
+	if not (item is WeaponItem):
+		return
+	if not model.can_change_weapon():
+		return
+	if item == inventory.equipped_weapon:
+		inventory.unequip_weapon()
+		model.unequip_weapon()
+		visuals.clear_weapon_visuals()
+	else:
+		inventory.equip_weapon(item)
+		model.equip_weapon(item)
+		visuals.show_weapon_visuals(item)

@@ -20,7 +20,8 @@ func update(input : InputPackage, delta):
 	if accepts_queueing():
 		check_combos(input)
 	if weapon:
-		humanoid.model.active_weapon.is_attacking = right_weapon_hurts()
+		weapon.is_attacking = right_weapon_hurts()
+		
 
 func move_player(delta : float):
 	var delta_pos = get_root_position_delta(delta)

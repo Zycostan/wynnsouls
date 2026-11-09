@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://kl5i35nds3fn" path="res://scripts/player/humanoidModel/combat.gd" id="2_tiweb"]
 [ext_resource type="Script" uid="uid://v04irx2lshme" path="res://scripts/player/moves/run.gd" id="4_rfycw"]
 [ext_resource type="AnimationLibrary" uid="uid://qyhgouyomlq7" path="res://assets/char_anims/UAL1.res" id="4_vlubo"]
-[ext_resource type="PackedScene" uid="uid://rxrxmsc05b74" path="res://scenes/weapon/sword.tscn" id="5_781a3"]
 [ext_resource type="Script" uid="uid://q7xovcwsquda" path="res://scripts/player/moves/sprint.gd" id="5_e734v"]
 [ext_resource type="AnimationLibrary" uid="uid://cg8vyo40acylp" path="res://assets/char_anims/UAL2.res" id="5_iw5cw"]
 [ext_resource type="Script" uid="uid://canyjrqnikw5l" path="res://scripts/player/moves/jump_run.gd" id="6_h5gvi"]
@@ -1642,15 +1641,15 @@ _data = {
 &"walk_params": SubResource("Animation_gnbca")
 }
 
-[node name="Model" type="Node3D" unique_id=1602666236 node_paths=PackedStringArray("skeleton", "animator", "combat", "resources", "area_awareness", "active_weapon", "moves_container")]
+[node name="Model" type="Node3D" unique_id=1602666236 node_paths=PackedStringArray("skeleton", "animator", "combat", "resources", "area_awareness", "moves_container", "weapon_socket")]
 script = ExtResource("1_cuhgi")
 skeleton = NodePath("GeneralSkeleton")
 animator = NodePath("AnimationPlayer")
 combat = NodePath("Combat")
 resources = NodePath("Resources")
 area_awareness = NodePath("AreaAwareness")
-active_weapon = NodePath("RightWrist/WeaponSocket/Sword")
 moves_container = NodePath("States")
+weapon_socket = NodePath("RightWrist/WeaponSocket")
 
 [node name="Resources" type="Node" parent="." unique_id=944445028]
 script = ExtResource("2_c8n1s")
@@ -2145,12 +2144,6 @@ external_skeleton = NodePath("../GeneralSkeleton")
 
 [node name="WeaponSocket" type="Node3D" parent="RightWrist" unique_id=723749556]
 transform = Transform3D(-0.16683316, 0.95751023, 0.2352465, -0.9842236, -0.14747038, -0.09775496, -0.05890949, -0.24784397, 0.9670074, 0.07317057, 0.07528961, 0.0057498813)
-
-[node name="Sword" parent="RightWrist/WeaponSocket" unique_id=566052958 node_paths=PackedStringArray("holder") groups=["players_weapon"] instance=ExtResource("5_781a3")]
-collision_layer = 4
-collision_mask = 4
-holder = NodePath("../../..")
-weapon_name = "Basic_Sword"
 
 [node name="AreaAwareness" type="Node" parent="." unique_id=131014396]
 script = ExtResource("8_iw5cw")

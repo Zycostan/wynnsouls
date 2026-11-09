@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://tgbfc8gbqika"]
 
 [ext_resource type="Script" uid="uid://dxarxywwinqwu" path="res://scripts/player/visuals/PlayerVisuals.gd" id="1_qy2ae"]
-[ext_resource type="PackedScene" uid="uid://bi3jq18pblrpb" path="res://scenes/weapon/sword_visuals.tscn" id="2_0g03g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_durmt"]
 resource_name = "M_Main"
@@ -270,21 +269,21 @@ mesh = SubResource("ArrayMesh_wd4ty")
 skin = SubResource("Skin_3kjmr")
 
 [node name="Health_bar" type="ProgressBar" parent="." unique_id=862582931]
-offset_top = 24.0
-offset_right = 200.0
-offset_bottom = 51.0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 296.0
+offset_bottom = 43.0
 theme_override_styles/background = SubResource("StyleBoxFlat_0g03g")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dmroa")
 value = 26.0
 rounded = true
 
 [node name="Stamina_bar" type="ProgressBar" parent="." unique_id=1199920034]
-offset_top = 64.0
-offset_right = 200.0
-offset_bottom = 91.0
+offset_left = 96.0
+offset_top = 56.0
+offset_right = 296.0
+offset_bottom = 83.0
 theme_override_styles/background = SubResource("StyleBoxFlat_kscix")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ru537")
 value = 12.32
 rounded = true
-
-[node name="SwordVisuals" parent="." unique_id=584805241 instance=ExtResource("2_0g03g")]
