@@ -4,6 +4,7 @@ extends CanvasLayer
 
 @onready var inventory_dialog = %InventoryDialog as InventoryDialog
 @onready var equipped_slot = $EquippedSlot as EquippedSlotHud
+@onready var ui_hub: Panel = $ui_hub
 
 
 func _ready() -> void:
@@ -12,5 +13,15 @@ func _ready() -> void:
 	equipped_slot.activated.connect(player.toggle_equip)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_released("interact"):
-		inventory_dialog.open(player.inventory)
+	if event.is_action_released("mouse_mode_switch"):
+		if ui_hub.visible:
+			ui_hub.hide()
+		else:
+			ui_hub.show()
+		if inventory_dialog.visible:
+			inventory_dialog.hide()
+	
+
+
+func _on_inventory_button_pressed() -> void:
+	inventory_dialog.open(player.inventory)

@@ -96,6 +96,40 @@ item = ExtResource("6_osun5")
 script = ExtResource("6_30c7u")
 player = NodePath("../player")
 
+[node name="ui_hub" type="Panel" parent="SubViewportContainer/SubViewport/UIRoot" unique_id=219820554]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/UIRoot/ui_hub" unique_id=961341495]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer" unique_id=1582652680]
+layout_mode = 2
+alignment = 1
+
+[node name="StatsButton" type="Button" parent="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer" unique_id=1776364229]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "STATS"
+
+[node name="InventoryButton" type="Button" parent="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer" unique_id=372697553]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "INVENTORY"
+
 [node name="EquippedSlot" type="PanelContainer" parent="SubViewportContainer/SubViewport/UIRoot" unique_id=1799338197]
 offset_left = 8.0
 offset_top = 8.0
@@ -112,11 +146,14 @@ expand_mode = 1
 [node name="InventoryDialog" parent="SubViewportContainer/SubViewport/UIRoot" unique_id=1659463318 instance=ExtResource("6_u3dv3")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -48.5
 offset_top = -17.5
-offset_right = 97.0
+offset_right = 48.5
 offset_bottom = 17.5
-grow_horizontal = 1
+
+[connection signal="pressed" from="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer/InventoryButton" to="SubViewportContainer/SubViewport/UIRoot" method="_on_inventory_button_pressed"]
