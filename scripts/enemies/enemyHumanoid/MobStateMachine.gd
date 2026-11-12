@@ -17,6 +17,7 @@ var repeat_count : int = 0
 var moves : Dictionary # { String : AIMove }
 var current_move : AIMove
 
+var clock : float = 0.0
 
 func _ready():
 	accept_states()
@@ -25,6 +26,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	clock += delta # time shit yk me
+	
 	var verdict = current_move.check_transition(delta)
 	if verdict[0]:
 		switch_to(verdict[1])
@@ -32,7 +35,8 @@ func _physics_process(delta):
 
 func switch_to(next_state_name : String):
 	print(current_move.move_name + " -> " + next_state_name)
-	current_move.on_exit()
+	if current_move:
+		current_move.on_exit()
 	current_move = moves[next_state_name]
 	current_move.mark_enter_state()
 	current_move.on_enter()
@@ -51,7 +55,7 @@ func accept_states():
 			child.resources = resources
 
 func can_attack() -> bool:
-	return Time.get_unix_time_from_system() >= next_attack_time
+	return clock >= next_attack_time
 
 func pick_attack() -> String:
 	var pool = attack_names.duplicate()

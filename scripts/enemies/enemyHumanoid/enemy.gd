@@ -16,7 +16,7 @@ extends CharacterBody3D
 var spawn_point : Vector3
 
 
-func _ready():
+func _enter_tree():
 	spawn_point = global_position
 
 func _process(delta: float) -> void:

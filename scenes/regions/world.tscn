@@ -80,6 +80,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 [node name="Enemy" parent="SubViewportContainer/SubViewport" unique_id=1139875144 node_paths=PackedStringArray("player") instance=ExtResource("4_w5816")]
 player = NodePath("../player")
 
+[node name="Enemy2" parent="SubViewportContainer/SubViewport" unique_id=2034638327 node_paths=PackedStringArray("player") instance=ExtResource("4_w5816")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
+player = NodePath("../player")
+
+[node name="Enemy3" parent="SubViewportContainer/SubViewport" unique_id=1964179857 node_paths=PackedStringArray("player") instance=ExtResource("4_w5816")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -5)
+player = NodePath("../player")
+
 [node name="pickup_item" parent="SubViewportContainer/SubViewport" unique_id=367582936 instance=ExtResource("5_uhfei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -13.7)
 item = ExtResource("6_osun5")
