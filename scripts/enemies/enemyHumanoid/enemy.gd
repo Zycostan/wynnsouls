@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var health_bar: ProgressBar = $Visuals/hpContainer/Health_bar
 @onready var resources: EnemyResources = $Resources
+@onready var player_look_at: Node3D = $PlayerLookAt
 
 
 @export var player : CharacterBody3D
@@ -20,6 +21,7 @@ func _enter_tree():
 	spawn_point = global_position
 
 func _process(delta: float) -> void:
+	player_look_at.global_position = player.global_position
 	update_resources_interface()
 
 func update_resources_interface():
