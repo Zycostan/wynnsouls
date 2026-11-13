@@ -1,9 +1,9 @@
 extends Weapon
 class_name Sword
 
+@export var damage : float = 15
 
 func _ready():
-	base_damage = 10
 	basic_attacks = {
 		"light_attack_pressed" : "slash_1",
 	}

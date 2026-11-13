@@ -66,4 +66,4 @@ func pick_attack() -> String:
 func register_attack(attack_name: String, duration: float):
 	repeat_count = repeat_count + 1 if attack_name == last_attack else 1
 	last_attack = attack_name
-	next_attack_time = Time.get_unix_time_from_system() + duration + randf_range(cooldown_min, cooldown_max)
+	next_attack_time = clock + duration + randf_range(cooldown_min, cooldown_max)

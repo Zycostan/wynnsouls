@@ -30,4 +30,7 @@ func _on_inventory_button_pressed() -> void:
 
 
 func _on_stats_button_pressed() -> void:
-	status_dialog.show()
+	if status_dialog.visible:
+		status_dialog.hide()
+	else:
+		status_dialog.show()
