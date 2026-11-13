@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://dhonavqlbymat" path="res://resources/item/weapon/basic_sword.tres" id="6_osun5"]
 [ext_resource type="PackedScene" uid="uid://csrbn4wplt821" path="res://scenes/ui/inventory/inventory_dialog.tscn" id="6_u3dv3"]
 [ext_resource type="Script" uid="uid://dme6ngphhmh3n" path="res://scripts/player/inventory/equipped_slot_hud.gd" id="6_uhfei"]
+[ext_resource type="PackedScene" uid="uid://cgwa3s4trpkci" path="res://scenes/ui/status_dialog.tscn" id="11_y2m6h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ql63m"]
 shader = ExtResource("2_whkkh")
@@ -122,7 +123,7 @@ alignment = 1
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "STATS"
+text = "STATUS"
 
 [node name="InventoryButton" type="Button" parent="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer" unique_id=372697553]
 custom_minimum_size = Vector2(0, 40)
@@ -156,4 +157,20 @@ offset_top = -17.5
 offset_right = 48.5
 offset_bottom = 17.5
 
+[node name="StatusDialog" parent="SubViewportContainer/SubViewport/UIRoot" unique_id=650020287 node_paths=PackedStringArray("player") instance=ExtResource("11_y2m6h")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+player = NodePath("../../player")
+
+[connection signal="pressed" from="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer/StatsButton" to="SubViewportContainer/SubViewport/UIRoot" method="_on_stats_button_pressed"]
 [connection signal="pressed" from="SubViewportContainer/SubViewport/UIRoot/ui_hub/HBoxContainer/VBoxContainer/InventoryButton" to="SubViewportContainer/SubViewport/UIRoot" method="_on_inventory_button_pressed"]

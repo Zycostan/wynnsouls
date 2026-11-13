@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://bhl65i2ne3e25"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whkkh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2m6h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjyk4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlodw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_henbc"]
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_whkkh")
+Button/styles/focus = SubResource("StyleBoxTexture_y2m6h")
+Button/styles/hover = SubResource("StyleBoxTexture_wjyk4")
+Button/styles/normal = SubResource("StyleBoxTexture_wlodw")
+Button/styles/pressed = SubResource("StyleBoxTexture_henbc")
