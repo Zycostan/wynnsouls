@@ -35,7 +35,7 @@ func move_player(delta : float):
 
 func form_hit_data(hitting_weapon : Weapon) -> HitData:
 	var hit = HitData.new()
-	hit.damage = hit_damage
+	hit.damage = weapon.base_damage
 	hit.hit_move_animation = animation
 	hit.is_parryable = is_parryable()
 	hit.weapon = hitting_weapon

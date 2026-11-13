@@ -10,6 +10,8 @@ class_name HumanoidResources
 @export var max_stamina : float = 100
 @export var stamina_regeneration_rate : float = 10  ## per sec, because then we'll multiply on delta
 
+@export var strength : int = 10
+
 @onready var model = $".." as PlayerModel
 
 var statuses : Array[String]

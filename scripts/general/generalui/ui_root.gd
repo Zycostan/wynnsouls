@@ -26,7 +26,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_inventory_button_pressed() -> void:
-	inventory_dialog.open(player.inventory)
+	if inventory_dialog.visible:
+		inventory_dialog.hide()
+	else:
+		inventory_dialog.open(player.inventory)
 
 
 func _on_stats_button_pressed() -> void:

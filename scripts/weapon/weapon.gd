@@ -8,7 +8,6 @@ var is_attacking: bool = false
 @export var weapon_name : String
 @export var base_damage : float = 10
 
-
 var basic_attacks : Dictionary
 
 const MOVES_NODE : String = "Moves"

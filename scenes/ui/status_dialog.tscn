@@ -40,7 +40,21 @@ text = "-"
 layout_mode = 2
 text = "+"
 
+[node name="StrengthStatLabel" type="Label" parent="VBoxContainer/GridContainer" unique_id=1235305733]
+layout_mode = 2
+text = "STRENGTH:"
+
+[node name="removeStrengthPoint" type="Button" parent="VBoxContainer/GridContainer" unique_id=22686467]
+layout_mode = 2
+text = "-"
+
+[node name="addStrengthPoint" type="Button" parent="VBoxContainer/GridContainer" unique_id=301172864]
+layout_mode = 2
+text = "+"
+
 [connection signal="pressed" from="VBoxContainer/GridContainer/removeStatPointH" to="." method="_on_remove_stat_point_h_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/addStatpointH" to="." method="_on_add_statpoint_h_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/removeStatPointSt" to="." method="_on_remove_stat_point_st_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/addStatpointSt" to="." method="_on_add_statpoint_st_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/removeStrengthPoint" to="." method="_on_remove_strength_point_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/addStrengthPoint" to="." method="_on_add_strength_point_pressed"]
