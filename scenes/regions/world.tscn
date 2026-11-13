@@ -11,30 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://csrbn4wplt821" path="res://scenes/ui/inventory/inventory_dialog.tscn" id="6_u3dv3"]
 [ext_resource type="Script" uid="uid://dme6ngphhmh3n" path="res://scripts/player/inventory/equipped_slot_hud.gd" id="6_uhfei"]
 [ext_resource type="PackedScene" uid="uid://cgwa3s4trpkci" path="res://scenes/ui/status_dialog.tscn" id="11_y2m6h"]
-[ext_resource type="AudioStream" uid="uid://bypvtqph2svfk" path="res://assets/music/ogg/Ambient 1.ogg" id="12_4an42"]
-[ext_resource type="AudioStream" uid="uid://gh8snvkea68m" path="res://assets/music/ogg/Ambient 2.ogg" id="13_p15tf"]
-[ext_resource type="AudioStream" uid="uid://k28ibgibc20k" path="res://assets/music/ogg/Ambient 3.ogg" id="14_oy17m"]
-[ext_resource type="AudioStream" uid="uid://crocfaywfbkx6" path="res://assets/music/ogg/Ambient 4.ogg" id="15_o5cj7"]
-[ext_resource type="AudioStream" uid="uid://bhogcva7561aw" path="res://assets/music/ogg/Ambient 5.ogg" id="16_alpbj"]
-[ext_resource type="AudioStream" uid="uid://bjdlc6am5bm8e" path="res://assets/music/ogg/Ambient 6.ogg" id="17_l8b4n"]
-[ext_resource type="AudioStream" uid="uid://bw5x1xwjurvwo" path="res://assets/music/ogg/Ambient 7 .ogg" id="18_lyd3s"]
-[ext_resource type="AudioStream" uid="uid://cnseblh3bqn3f" path="res://assets/music/ogg/Ambient 8.ogg" id="19_xmqlj"]
-[ext_resource type="AudioStream" uid="uid://b33vhx2ffjjiv" path="res://assets/music/ogg/Ambient 9.ogg" id="20_ssbu4"]
-[ext_resource type="AudioStream" uid="uid://rfy7ti8pknkx" path="res://assets/music/ogg/Ambient 10.ogg" id="21_sm60t"]
-
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_ql63m"]
-shuffle = true
-stream_count = 10
-stream_0 = ExtResource("12_4an42")
-stream_1 = ExtResource("13_p15tf")
-stream_2 = ExtResource("14_oy17m")
-stream_3 = ExtResource("15_o5cj7")
-stream_4 = ExtResource("16_alpbj")
-stream_5 = ExtResource("17_l8b4n")
-stream_6 = ExtResource("18_lyd3s")
-stream_7 = ExtResource("19_xmqlj")
-stream_8 = ExtResource("20_ssbu4")
-stream_9 = ExtResource("21_sm60t")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ql63m"]
 shader = ExtResource("2_whkkh")
@@ -61,11 +37,6 @@ uv1_triplanar = true
 
 [node name="world" type="Node3D" unique_id=186616731]
 script = ExtResource("1_w5816")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1428929585]
-stream = SubResource("AudioStreamPlaylist_ql63m")
-volume_db = -10.0
-autoplay = true
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=92138549]
 material = SubResource("ShaderMaterial_ql63m")
