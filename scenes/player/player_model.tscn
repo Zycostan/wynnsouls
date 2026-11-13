@@ -2203,7 +2203,7 @@ animation = "Sprint"
 move_name = "sprint"
 priority = 3
 backend_animation = "sprint_params"
-stamina_cost = 15.0
+stamina_cost = 5.0
 
 [node name="JumpRun" type="Node" parent="States" unique_id=960335226]
 script = ExtResource("6_h5gvi")

@@ -152,3 +152,7 @@ func try_force_move(new_forced_move : String):
 		forced_move = new_forced_move
 	elif container.moves[new_forced_move].priority >= container.moves[forced_move].priority:
 		forced_move = new_forced_move
+
+# no comments for you
+# it was hard to write
+# so it should be hard to read

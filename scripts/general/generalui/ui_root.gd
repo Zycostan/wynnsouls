@@ -2,9 +2,9 @@ extends CanvasLayer
 
 @export var player : Player
 
-@onready var status_dialog = $StatusDialog as StatusDialog
+@onready var status_dialog = %StatusDialog as StatusDialog
 @onready var inventory_dialog = %InventoryDialog as InventoryDialog
-@onready var equipped_slot = $EquippedSlot as EquippedSlotHud
+@onready var equipped_slot = %EquippedSlot as EquippedSlotHud
 @onready var ui_hub: Panel = $ui_hub
 
 func _ready() -> void:
