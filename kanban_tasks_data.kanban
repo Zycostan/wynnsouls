@@ -14,7 +14,12 @@
 				"26e7c8eb-23ce-47b0-84d7-c60c482a0359",
 				"072b1aba-09ca-4a52-9b02-cb46d533c385",
 				"ae2a9877-e5ea-4c72-be0f-50e1da984d14",
-				"7f1ebc6f-782b-4fde-adab-bd5c2f1d211b"
+				"7f1ebc6f-782b-4fde-adab-bd5c2f1d211b",
+				"a63520dc-75bd-40dd-bb7c-7d6d00581e03",
+				"fdcd407c-673d-4c1a-a41f-2065d859054d",
+				"7e237fe9-bf3b-4f00-98c8-84460d79a953",
+				"5cb09776-d2e6-4048-b393-23e07900632e",
+				"000cbc9a-6e68-40b4-8a29-2c7b6de01756"
 			]
 		},
 		{
@@ -23,8 +28,10 @@
 			"tasks": [
 				"5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
 				"1e842873-b390-496f-8684-0ac079be3daf",
-				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec",
-				"3ccace76-d2ae-4431-8c11-82c57857795d"
+				"3ccace76-d2ae-4431-8c11-82c57857795d",
+				"2f4ead5e-a395-4b64-9f1b-4bfa34cae439",
+				"273547e6-7da8-448b-b9f9-0e80a66465de",
+				"f482a67d-891f-41cc-bd60-6244cf969a1c"
 			]
 		},
 		{
@@ -32,7 +39,8 @@
 			"title": "Done",
 			"tasks": [
 				"ce25c71a-2a4c-4a26-8c4a-f04b2f0fc360",
-				"6371b7e9-5285-485a-b705-cbeaee1daa6a"
+				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
+				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec"
 			]
 		}
 	],
@@ -134,6 +142,62 @@
 		{
 			"uuid": "6371b7e9-5285-485a-b705-cbeaee1daa6a",
 			"title": "Inventory",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "a63520dc-75bd-40dd-bb7c-7d6d00581e03",
+			"title": "harvesting and loot tables",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "fdcd407c-673d-4c1a-a41f-2065d859054d",
+			"title": "crafting and foraging",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "7e237fe9-bf3b-4f00-98c8-84460d79a953",
+			"title": "wounds",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "5cb09776-d2e6-4048-b393-23e07900632e",
+			"title": "weapon upgrades",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "2f4ead5e-a395-4b64-9f1b-4bfa34cae439",
+			"title": "status effects",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "273547e6-7da8-448b-b9f9-0e80a66465de",
+			"title": "consumables",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "000cbc9a-6e68-40b4-8a29-2c7b6de01756",
+			"title": "checkpoints and fast travel",
+			"description": "",
+			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
+			"steps": []
+		},
+		{
+			"uuid": "f482a67d-891f-41cc-bd60-6244cf969a1c",
+			"title": "death and respawning",
 			"description": "",
 			"category": "9c49b664-7055-4c94-9e7d-bc427d6f49d5",
 			"steps": []
