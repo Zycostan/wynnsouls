@@ -4,4 +4,4 @@ extends Consumable
 
 func do(target: Node):
 	if player.model.resources.health > player.model.resources.max_health:
-		player.model.resources.health += health_regain
+		player.model.resources.gain_health(health_regain)

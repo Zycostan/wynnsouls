@@ -47,7 +47,7 @@ func lose_stamina(amount : float):
 			statuses.append("fatique")
 
 func gain_stamina(amount : float):
-	if stamina + amount < max_stamina:
+	if stamina + amount <= max_stamina:
 		stamina += amount
 	else:
 		stamina = max_stamina
