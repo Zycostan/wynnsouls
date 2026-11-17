@@ -2,7 +2,10 @@ extends Node3D
 class_name PlayerVisuals
 
 @onready var model : PlayerModel
-@onready var mannequin: MeshInstance3D = $Mannequin
+
+@onready var eyebrows: MeshInstance3D = $Eyebrows
+@onready var eyes: MeshInstance3D = $Eyes
+@onready var super_hero_male: MeshInstance3D = $SuperHero_Male
 
 @onready var weapon_visuals: Node3D
 @onready var stamina_bar: ProgressBar = $Stamina_bar
@@ -11,7 +14,9 @@ class_name PlayerVisuals
 
 func accept_model(_model: PlayerModel):
 	model = _model
-	mannequin.skeleton = _model.skeleton.get_path()
+	super_hero_male.skeleton = _model.skeleton.get_path()
+	eyes.skeleton = _model.skeleton.get_path()
+	eyebrows.skeleton = _model.skeleton.get_path()
 
 func _process(_delta):
 	adjust_weapon_visuals()
