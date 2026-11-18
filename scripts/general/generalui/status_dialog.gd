@@ -3,6 +3,18 @@ class_name StatusDialog
 
 @export var player : Player
 
+@onready var health_stat_label: Label = %HealthStatLabel
+@onready var stamina_stat_label: Label = %StaminaStatLabel
+@onready var strength_stat_label: Label = %StrengthStatLabel
+
+func _process(delta: float) -> void:
+	update()
+
+func update():
+	health_stat_label.text = "HEALTH: " + str(player.model.resources.max_health)
+	stamina_stat_label.text = "STAMINA: " + str(player.model.resources.max_stamina)
+	strength_stat_label.text = "STRENGTH: " + str(player.model.resources.strength)
+
 func upgrade_health():
 	player.model.resources.max_health += 10
 

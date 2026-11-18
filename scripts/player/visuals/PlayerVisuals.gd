@@ -11,6 +11,9 @@ class_name PlayerVisuals
 @onready var stamina_bar: ProgressBar = $Stamina_bar
 @onready var health_bar: ProgressBar = $Health_bar
 
+@export var pixel_hp : float = 4.0
+@export var pixel_stamina : float = 4.0
+@export var max_bar_width : float = 800.0
 
 func accept_model(_model: PlayerModel):
 	model = _model

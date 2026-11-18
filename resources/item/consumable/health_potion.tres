@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HealthPot" format=3 uid="uid://pilgxfeqd1jh"]
+
+[ext_resource type="Texture2D" uid="uid://c2hm258itykxq" path="res://assets/character_models/Godot - UE/T_Eye_Brown.png" id="1_7l76c"]
+[ext_resource type="Script" uid="uid://dl63olrel06jx" path="res://scripts/consumables/health_pot.gd" id="1_opfpj"]
+[ext_resource type="PackedScene" uid="uid://xpswhgkfqvhs" path="res://assets/anim_models/UAL2_Standard.glb" id="2_tm6px"]
+
+[resource]
+script = ExtResource("1_opfpj")
+item_icon = ExtResource("1_7l76c")
+item_name = "Health Flask"
+item_model = ExtResource("2_tm6px")
+item_visuals = ExtResource("2_tm6px")
+metadata/_custom_type_script = "uid://dl63olrel06jx"

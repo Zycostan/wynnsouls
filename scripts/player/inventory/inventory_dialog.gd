@@ -24,8 +24,6 @@ func refresh():
 	for item in _inventory.get_items():
 		var slot = item_slot.instantiate()
 		grid_container.add_child(slot)
-		slot.display(item)
+		var is_equipped = (item == _inventory.equipped_weapon)
+		slot.display(item, is_equipped)
 		slot.activated.connect(item_activated.emit)
-
-func _on_close_button_pressed() -> void:
-	hide()
