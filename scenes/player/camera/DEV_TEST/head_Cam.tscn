@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4k0sl7c6i3qr"]
+
+[node name="Head" type="BoneAttachment3D" unique_id=875114694]
+transform = Transform3D(1, 0, 0, 0, 1, -6.7800283e-07, 0, 6.7800283e-07, 1, 0, 0, 0)
+visible = false
+bone_name = "Head"
+bone_idx = 6
+use_external_skeleton = true
+external_skeleton = NodePath("../GeneralSkeleton")
+
+[node name="headCamera" type="Node3D" parent="." unique_id=450827381]
+transform = Transform3D(0.9847501, -0.004038697, 0.17393103, -0.011018712, 0.9962759, 0.08551849, -0.1736287, -0.08613079, 0.9810375, 0.0048364624, 0.09694743, -0.024038926)
+
+[node name="Camera3D" type="Camera3D" parent="headCamera" unique_id=398456293]
+transform = Transform3D(-0.9999999, 5.1397365e-08, 7.450581e-09, 5.529728e-09, 0.99999994, 1.4342368e-07, -1.0058284e-07, 3.7252903e-09, -1.0000002, 0.003155224, -0.002076149, 0.09992866)
+fov = 80.0

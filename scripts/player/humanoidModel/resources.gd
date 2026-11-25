@@ -15,6 +15,7 @@ class_name HumanoidResources
 @onready var model = $".." as PlayerModel
 
 var statuses : Array[String]
+var effects : Array[StatusEffect] = []
 const FATIQUE_TRESHOLD = 20
 
 func update(delta : float):
@@ -53,3 +54,29 @@ func gain_stamina(amount : float):
 		stamina = max_stamina
 	if stamina > FATIQUE_TRESHOLD:
 		statuses.erase("fatique")
+
+func add_effect(eff: StatusEffect):
+	for e in effects:
+		if e.effect_name == eff.effect_name:
+			e.refresh() # reapply poison resets the timer instead of stacking that shits
+			return
+	var effect := eff.duplicate() as StatusEffect # timer per target
+	effects.append(effect)
+	statuses.append(effect.effect_name)
+	effect.apply(self)
+
+func tick_effects(delta: float):
+	for e in effects.duplicate():
+		if effects.has(e) and e.time(delta):
+			remove_effect(e)
+
+func remove_effect(ef: StatusEffect):
+	if not effects.has(ef):
+		return
+	effects.erase(ef)
+	statuses.erase(ef.effect_name)
+	ef.remove()
+
+func clear_effects():
+	for e in effects.duplicate():
+		remove_effect(e)

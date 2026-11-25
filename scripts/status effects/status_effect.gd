@@ -11,13 +11,20 @@ var tick_time : float = 0.0
 
 func apply(t: Node):
 	target = t
-	# TODO, apply init stat changes
+	e_time = 0.0
+	tick_time = 0.0
 
-func time(delta: float) -> void:
-	duration -= delta
-	tick_int += delta
-	if tick_time >= tick_int:
-		tick_time = 0.0
+func time(delta: float) -> bool:
+	e_time += delta
+	if tick_time > 0.0:
+		tick_time += delta
+		while tick_time >= tick_int:
+			tick_time -= tick_int
+			effect_tick()
+	return e_time >= duration
+
+func refresh() -> void:
+	e_time = 0.0
 
 func effect_tick():
 	# override this in child

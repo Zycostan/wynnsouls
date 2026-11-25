@@ -29,8 +29,6 @@
 				"5fc9061f-d3cb-4632-acf4-09bb55bee0b4",
 				"1e842873-b390-496f-8684-0ac079be3daf",
 				"3ccace76-d2ae-4431-8c11-82c57857795d",
-				"2f4ead5e-a395-4b64-9f1b-4bfa34cae439",
-				"273547e6-7da8-448b-b9f9-0e80a66465de",
 				"f482a67d-891f-41cc-bd60-6244cf969a1c"
 			]
 		},
@@ -40,7 +38,9 @@
 			"tasks": [
 				"ce25c71a-2a4c-4a26-8c4a-f04b2f0fc360",
 				"6371b7e9-5285-485a-b705-cbeaee1daa6a",
-				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec"
+				"2dea5bc5-6fe6-4055-97e4-4eb6c64427ec",
+				"273547e6-7da8-448b-b9f9-0e80a66465de",
+				"2f4ead5e-a395-4b64-9f1b-4bfa34cae439"
 			]
 		}
 	],

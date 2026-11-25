@@ -4,6 +4,7 @@ signal changed
 
 var inventory_dict : Array[Item] = []
 var equipped_weapon : WeaponItem = null
+var equipped_consumable : Consumable = null
 
 func add_item(item: Item):
 	inventory_dict.append(item)
@@ -24,3 +25,7 @@ func unequip_weapon():
 	if equipped_weapon:
 		equipped_weapon = null
 		changed.emit()
+
+func equip_consumable(item: Consumable):
+	equipped_consumable = item
+	changed.emit()

@@ -15,8 +15,6 @@ func gather_input() -> InputPackage:
 		if Input.is_action_pressed("sprint"):		# sprint is hidden here to avoid standing in place and sprinting
 			new_input.actions.append("sprint")
 		
-		if Input.is_action_just_pressed("interact"):
-			new_input.actions.append("consume")
 		
 		if Input.is_action_pressed("parry"):
 			new_input.actions.append("parry")
@@ -30,7 +28,9 @@ func gather_input() -> InputPackage:
 	if Input.is_action_just_pressed("light_attack"):
 		new_input.combat_actions.append("light_attack_pressed")
 	
-	
+	var p := player as Player
+	if Input.is_action_just_pressed("interact") and p and p.inventory.equipped_consumable and p.inventory.equipped_consumable.current_charge > 0:
+			new_input.actions.append("consume")
 	
 	
 	return new_input

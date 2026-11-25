@@ -11,7 +11,5 @@ func default_lifecycle(input) -> String:
 func on_enter_state():
 	humanoid.velocity = Vector3.ZERO
 	
-	if potion and potion.current_charge > 0:
-		potion.use(humanoid)
-	else:
-		printerr("NO")
+	if humanoid.has_method("use_quick_item"):
+		humanoid.use_quick_item()

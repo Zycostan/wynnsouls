@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://dhonavqlbymat" path="res://resources/item/weapon/basic_sword.tres" id="6_osun5"]
 [ext_resource type="PackedScene" uid="uid://csrbn4wplt821" path="res://scenes/ui/inventory/inventory_dialog.tscn" id="6_u3dv3"]
 [ext_resource type="Script" uid="uid://dme6ngphhmh3n" path="res://scripts/player/inventory/equipped_slot_hud.gd" id="6_uhfei"]
+[ext_resource type="Resource" uid="uid://pilgxfeqd1jh" path="res://resources/item/consumable/health_potion.tres" id="8_wjyk4"]
 [ext_resource type="PackedScene" uid="uid://cgwa3s4trpkci" path="res://scenes/ui/status_dialog.tscn" id="11_y2m6h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ql63m"]
@@ -92,6 +93,10 @@ player = NodePath("../player")
 [node name="pickup_item" parent="SubViewportContainer/SubViewport" unique_id=367582936 instance=ExtResource("5_uhfei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -13.7)
 item = ExtResource("6_osun5")
+
+[node name="pickup_item2" parent="SubViewportContainer/SubViewport" unique_id=1824216394 instance=ExtResource("5_uhfei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 1.1, -13.7)
+item = ExtResource("8_wjyk4")
 
 [node name="UIRoot" type="CanvasLayer" parent="SubViewportContainer/SubViewport" unique_id=1571712437 node_paths=PackedStringArray("player")]
 script = ExtResource("6_30c7u")

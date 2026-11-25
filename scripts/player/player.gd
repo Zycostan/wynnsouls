@@ -19,10 +19,14 @@ func _physics_process(delta):
 	input.queue_free()
 
 func on_item_picked_up(item: Item):
-	print("got a ", item.item_name)
+	if item is Consumable:
+		item = item.duplicate() # change per copy not tres
 	inventory.add_item(item)
 
 func toggle_equip(item: Item):
+	if item is Consumable:
+		inventory.equip_consumable(null if item == inventory.equipped_consumable else item)
+		return
 	if not (item is WeaponItem):
 		return
 	if not model.can_change_weapon():
@@ -35,3 +39,12 @@ func toggle_equip(item: Item):
 		inventory.equip_weapon(item)
 		model.equip_weapon(item)
 		visuals.show_weapon_visuals(item)
+
+func use_quick_item() -> bool:
+	var item := inventory.equipped_consumable
+	if item == null:
+		return false
+	var used = item.use(self)
+	if used:
+		inventory.changed.emit() # refresh display
+	return used
